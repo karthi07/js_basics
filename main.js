@@ -1,12 +1,16 @@
-// h1Tag.innerHTML = "hello world";
-// console.log("tset code");
 
-let button1 = document.getElementById("btn1");
-button1.addEventListener("dblclick", changeH1Tag);
+const todoUl = document.getElementById("todo-ul");
 
-function changeH1Tag() {
-  let h1Tag = document.querySelector("h1");
-  h1Tag.innerHTML = "On click";
+function addTask() {
+    const todoText = document.getElementById("todo-text");
+
+    if (todoText.value.trim() === '') {
+        alert('Enter some text');
+    } else {
+        const liTag = document.createElement('li');
+        liTag.innerHTML = todoText.value.trim()
+        todoUl.appendChild(liTag);
+        todoText.value = ''
+    }
 }
 
-// changeH1Tag();
