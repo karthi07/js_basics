@@ -24,15 +24,5 @@
     <h3 id="selectedItem">  </h3>
 </div>
 <script src="main.js"></script>
-<script>
-    var v1=new XMLHttpRequest();
-    v1.onreadystatechange=function(){
-        if(this.readyState===4 && this.status===2000){
-            console.log(v1.responseText);
-        }
-    };
-    v1.open("Get","main.json",true);
-    v1.send();
-</script>
 </body>
 </html>
