@@ -1,5 +1,5 @@
 {       
 "bf_list" : ["idli", "dosai", "pongal"],
 "lunch_list" : ["sambar", "pulikulambu", "chicken"],
-"dinner_list" : ["idli", "dosai", "chappathi"]
+"dinner_list" : [ "dosai", "chappathi"]
 }

@@ -29,7 +29,11 @@ function getRandom(tasktype) {
 function getData(){
 
     fetch('users.json').then(response => response.json()).
-    then(data => {console.log(data); bf_list=data.bf_list; showData() });
+    then(data => {console.log(data);
+         bf_list=data.bf_list; 
+         lunch_list = data.lunch_list;
+         dinner_list = data.dinner_list;
+         showData() });
   }
 
  function showData(){
@@ -38,35 +42,12 @@ function getData(){
         liTag.innerHTML = name
         bfNameList.appendChild(liTag);
     })
-
-  }
-//   lunch
-
-function getData(){
-
-    fetch('users.json').then(response => response.json()).
-    then(data => {console.log(data); lunch_list=data.lunch_list; showData() });
-  }
-
- function showData(){
     lunch_list.forEach(name=>{
         const liTag = document.createElement('li');
         liTag.innerHTML = name
         lunchNameList.appendChild(liTag);
     })
-
-  }
-
-
-// dinner
-
-function getData(){
-
-    fetch('users.json').then(response => response.json()).
-    then(data => {console.log(data); dinner_list=data.dinner_list; showData() });
-  }
-
- function showData(){
+    
     dinner_list.forEach(name=>{
         const liTag = document.createElement('li');
         liTag.innerHTML = name
@@ -74,8 +55,7 @@ function getData(){
     })
 
   }
-//   add task
-
+  
 function addTask(tasktype) {
     if (tasktype == 1)
     {
