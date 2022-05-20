@@ -24,20 +24,57 @@ function getRandom(tasktype) {
         document.getElementById('selectedItem-dinner').innerHTML = dinner_list[random_item]
     }
 }
+// breakfast
 
-// function getData(){
-//     fetch('users.json').then(response => response.json()).
-//     then(data => { name_list=data.name_list; showData() });
-//   }
+function getData(){
 
-//  function showData(){
-//     name_list.forEach(name=>{
-//         const liTag = document.createElement('li');
-//         liTag.innerHTML = name
-//         todoUl.appendChild(liTag);
-//     })
+    fetch('users.json').then(response => response.json()).
+    then(data => {console.log(data); bf_list=data.bf_list; showData() });
+  }
 
-//   }
+ function showData(){
+    bf_list.forEach(name=>{
+        const liTag = document.createElement('li');
+        liTag.innerHTML = name
+        bfNameList.appendChild(liTag);
+    })
+
+  }
+//   lunch
+
+function getData(){
+
+    fetch('users.json').then(response => response.json()).
+    then(data => {console.log(data); lunch_list=data.lunch_list; showData() });
+  }
+
+ function showData(){
+    lunch_list.forEach(name=>{
+        const liTag = document.createElement('li');
+        liTag.innerHTML = name
+        lunchNameList.appendChild(liTag);
+    })
+
+  }
+
+
+// dinner
+
+function getData(){
+
+    fetch('users.json').then(response => response.json()).
+    then(data => {console.log(data); dinner_list=data.dinner_list; showData() });
+  }
+
+ function showData(){
+    dinner_list.forEach(name=>{
+        const liTag = document.createElement('li');
+        liTag.innerHTML = name
+        dinnerNameList.appendChild(liTag);
+    })
+
+  }
+//   add task
 
 function addTask(tasktype) {
     if (tasktype == 1)
@@ -75,4 +112,4 @@ function addTask(tasktype) {
     
 }
 
-// getData()
+getData()
