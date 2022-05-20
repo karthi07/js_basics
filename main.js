@@ -9,9 +9,20 @@ const lunchNameList = document.getElementById("lunch-name-list");
 const dinnerItemName = document.getElementById("dinner-item-name");
 const dinnerNameList = document.getElementById("dinner-name-list");
 
-function getRandom() {
-    var random_item =  Math.floor(Math.random() * name_list.length)
-    document.getElementById('selectedItem').innerHTML = name_list[random_item]
+function getRandom(tasktype) {
+
+    if (tasktype == 1) {
+        var random_item =  Math.floor(Math.random() * bf_list.length)
+        document.getElementById('selectedItem-bf').innerHTML = bf_list[random_item]
+    }
+    if (tasktype == 2) {
+        var random_item =  Math.floor(Math.random() * lunch_list.length)
+        document.getElementById('selectedItem-lunch').innerHTML = lunch_list[random_item]
+    }
+    if (tasktype == 3) {
+        var random_item =  Math.floor(Math.random() * dinner_list.length)
+        document.getElementById('selectedItem-dinner').innerHTML = dinner_list[random_item]
+    }
 }
 
 // function getData(){
